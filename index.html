@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fadia Test - PR</title>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#7c3aed,#a78bfa);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#fff;
+}
+
+.container{
+background:#f3f0ff;
+color:#1e1b4b;
+width:520px;
+padding:30px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+text-align:center;
+}
+
+.logo{
+width:120px;
+margin-bottom:15px;
+}
+
+h1{
+margin-bottom:10px;
+color:#5b21b6;
+font-size:22px;
+}
+
+.university-info{
+font-size:13px;
+color:#5b21b6;
+margin-bottom:20px;
+line-height:1.4em;
+}
+
+#timer{
+font-weight:bold;
+font-size:22px;
+margin:0 auto 20px auto;
+color:#7c3aed;
+background:#ede9fe;
+padding:10px 20px;
+border-radius:15px;
+display:block;
+width:120px;
+}
+
+.student{
+width:100%;
+padding:14px;
+margin-bottom:20px;
+border-radius:20px;
+border:2px solid #5b21b6;
+font-size:16px;
+outline:none;
+}
+
+.question{
+font-weight:bold;
+margin:20px 0 15px 0;
+font-size:16px;
+}
+
+.diagram div.arrow{
+margin:5px 0;
+font-size:18px;
+color:#5b21b6;
+}
+
+.choices{
+text-align:right;
+margin-top:15px;
+}
+
+.choices label{
+display:block;
+background:#ede9fe;
+margin:8px 0;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.choices label:hover{
+background:#ddd6fe;
+}
+
+button.answer{
+width:100%;
+padding:14px;
+margin:15px 0;
+border:none;
+border-radius:12px;
+font-size:16px;
+cursor:pointer;
+background: linear-gradient(45deg,#7c3aed,#a78bfa);
+color:#fff;
+transition:0.3s;
+}
+
+button.answer:hover{
+transform:scale(1.05);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.footer{
+margin-top:20px;
+font-size:12px;
+color:#555;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.jpg" class="logo">
+
+<h1>إمتحان تجريبي مقياس تخطيط في العلاقات العامة</h1>
+
+<div class="university-info">
+جامعة جيلالي يابس – سيدي بلعباس<br>
+كلية علوم إنسانية وإجتماعية<br>
+قسم الإعلام و الإتصال<br>
+تخصص اتصال و علاقات عامة
+</div>
+
+<div id="timer">12:00</div>
+
+<input class="student" type="text" placeholder="اكتب اسمك هنا">
+
+<div class="question">
+حدد المراحل الصحيحة الخاصة بالتخطيط الإستراتيجي للعلاقات العامة:
+</div>
+
+<div class="choices">
+
+<label><input type="checkbox" value="تحليل البيئة الداخلية والخارجية للمؤسسة"> تحليل البيئة الداخلية والخارجية للمؤسسة</label>
+
+<label><input type="checkbox" value="تحديد الجمهور المستهدف وتصنيف فئاته"> تحديد الجمهور المستهدف وتصنيف فئاته</label>
+
+<label><input type="checkbox" value="تحديد رؤية المؤسسة ورسالتها العامة"> تحديد رؤية المؤسسة ورسالتها العامة</label>
+
+<label><input type="checkbox" value="صياغة الأهداف الاتصالية للعلاقات العامة"> صياغة الأهداف الاتصالية للعلاقات العامة</label>
+
+<label><input type="checkbox" value="تطوير المنتج أو الخدمة بما يتناسب مع السوق"> تطوير المنتج أو الخدمة بما يتناسب مع السوق</label>
+
+<label><input type="checkbox" value="اختيار الاستراتيجيات والوسائل الاتصالية المناسبة"> اختيار الاستراتيجيات والوسائل الاتصالية المناسبة</label>
+
+<label><input type="checkbox" value="تحديد الرسائل الإعلامية الرئيسية"> تحديد الرسائل الإعلامية الرئيسية</label>
+
+<label><input type="checkbox" value="إعداد الخطة الزمنية والميزانية للأنشطة الاتصالية"> إعداد الخطة الزمنية والميزانية للأنشطة الاتصالية</label>
+
+<label><input type="checkbox" value="تدريب العمال على خطوط الإنتاج الجديدة"> تدريب العمال على خطوط الإنتاج الجديدة</label>
+
+<label><input type="checkbox" value="تنفيذ البرامج والحملات الاتصالية"> تنفيذ البرامج والحملات الاتصالية</label>
+
+<label><input type="checkbox" value="متابعة ردود فعل الجمهور ووسائل الإعلام"> متابعة ردود فعل الجمهور ووسائل الإعلام</label>
+
+<label><input type="checkbox" value="تقييم النتائج وقياس مدى تحقيق الأهداف"> تقييم النتائج وقياس مدى تحقيق الأهداف</label>
+
+<label><input type="checkbox" value="تحديد موقع المؤسسة في السوق التنافسي"> تحديد موقع المؤسسة في السوق التنافسي</label>
+
+<label><input type="checkbox" value="بناء علاقات مع وسائل الإعلام والجمهور"> بناء علاقات مع وسائل الإعلام والجمهور</label>
+
+</div>
+
+<button class="answer" onclick="sendChoices()">إرسال الإجابة</button>
+
+<div class="footer">
+Designed with 💕 by Fadia
+</div>
+
+</div>
+
+<script>
+
+(function(){
+emailjs.init("4RHKeJ66ijZvoWn68");
+})();
+
+function sendChoices(){
+
+var name=document.querySelector(".student").value;
+
+if(name===""){
+alert("الرجاء كتابة الاسم أولا");
+return;
+}
+
+var answers=[];
+var boxes=document.querySelectorAll(".choices input:checked");
+
+boxes.forEach(function(box){
+answers.push(box.value);
+});
+
+var templateParams={
+name:name,
+answer:answers.join(" , ")
+};
+
+emailjs.send("service_16mtzdi","template_dclzub6",templateParams)
+.then(function(){
+alert("تم إرسال الإجابة بنجاح 🌸");
+},function(error){
+alert("حدث خطأ ❌");
+console.log(error);
+});
+
+}
+
+var time=12*60;
+
+var timer=setInterval(function(){
+
+var minutes=Math.floor(time/60);
+var seconds=time%60;
+
+if(seconds<10){seconds="0"+seconds;}
+
+document.getElementById("timer").innerHTML=minutes+":"+seconds;
+
+time--;
+
+if(time<0){
+
+clearInterval(timer);
+
+document.querySelectorAll(".answer").forEach(function(btn){
+btn.disabled=true;
+btn.style.background="#999";
+});
+
+document.getElementById("timer").innerHTML="انتهى الوقت";
+
+alert("انتهى وقت الإجابة");
+
+}
+
+},1000);
+
+</script>
+
+</body>
+</html>
